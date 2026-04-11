@@ -37,5 +37,5 @@ RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
     kafka-python-ng && \
     fix-permissions "/home/${NB_USER}"
 
-USER ${NB_USER}
+USER root
 WORKDIR /home/jovyan/notebooks
