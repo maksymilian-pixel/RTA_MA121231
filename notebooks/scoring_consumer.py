@@ -1,7 +1,7 @@
 from kafka import KafkaConsumer, KafkaProducer
 import json
 
-consumer = KafkaConsumer('filtered_transactions', bootstrap_servers='broker:9092',
+consumer = KafkaConsumer('transactions', bootstrap_servers='broker:9092',
     auto_offset_reset='earliest', group_id='scoring-group',
     value_deserializer=lambda x: json.loads(x.decode('utf-8')))
 
